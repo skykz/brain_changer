@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.brain_changer">
+    package="com.project.brain_changer">
    <application
         android:label="brain_changer"
         android:name="${applicationName}"
