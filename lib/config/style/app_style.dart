@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 /// все цвета которые мы юзаем в приложений
 class AppColors {
   static const appPrimaryColor = Color(0xff434648);
+  static const appYellowColor = Color(0xffffeb02);
 
   static const appPassedGradientColor = [
     Color.fromRGBO(78, 194, 79, 1),

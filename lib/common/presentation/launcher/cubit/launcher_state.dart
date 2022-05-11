@@ -3,3 +3,7 @@
 import 'package:flutter_core/core/presentation/abstract/bloc/core_state.dart';
 
 class LauncherState extends CoreState {}
+
+class GlobalLauncherShowLoginState extends CoreState {}
+
+class GlobalLauncherShowHomeState extends CoreState {}

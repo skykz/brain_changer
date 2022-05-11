@@ -2,6 +2,9 @@
 
 import 'package:brain_changer/common/data/launcher/prefs/launcher_data_source.dart';
 import 'package:brain_changer/common/data/launcher/repository/launcher_repository.dart';
+import 'package:brain_changer/common/domain/launcher/usecase/launcher_usecase.dart';
+import 'package:brain_changer/config/network/app_network_client.dart';
+import 'package:brain_changer/config/network/repository/app_network_repository.dart';
 import 'package:brain_changer/constants/global_network_constants.dart';
 import 'package:brain_changer/constants/global_prefs_constants.dart';
 import 'package:flutter_core/core/di/core_locator.dart';
@@ -30,14 +33,7 @@ void _commonMainModule() {
   /// Shared preferences
   final sharedPreferences = SharedPreferences.getInstance();
   locator.registerSingletonAsync(() => sharedPreferences);
-
-  // /// Firebase Analytics
-  // _googleAnalyticsService();
 }
-
-// void _googleAnalyticsService() {
-//   locator.registerLazySingleton(() => AnalyticsService());
-// }
 
 void _apiServiceModule() async {
   /// для авторизованной зоны
@@ -51,17 +47,14 @@ void _dataSourceModule() async {
   final sharedPreferences = SharedPreferences.getInstance();
 
   locator.registerSingleton(GlobalPersonalSecureDataSource(sharedPreferences));
-  locator.registerSingleton(GlobalLauncherDataSource(locator.getAsync()));
 }
 
 /// для репозиторий
 void _repositoryModule() {
-  ///платежи
   locator.registerFactory(() => GlobalPersonalSecureDataRepository());
-  locator.registerFactory(() => GlobalLauncherRepository());
 }
 
 /// для useCase
 void _useCaseModule() {
-  locator.registerFactory(() => GetNotificationListUseCase());
+  locator.registerFactory(() => GlobalLauncherActionApplicationUseCase());
 }

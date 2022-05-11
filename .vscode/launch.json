@@ -7,7 +7,10 @@
         {
             "name": "brain_changer",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "args": [
+                "--no-sound-null-safety"
+            ]
         },
         {
             "name": "brain_changer (profile mode)",

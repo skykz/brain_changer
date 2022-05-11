@@ -2,8 +2,8 @@ import 'package:brain_changer/common/presentation/widgets/app_hide_keyboard_widg
 import 'package:brain_changer/config/style/app_style.dart';
 import 'package:flutter/material.dart';
 
-class AuthLoginNewUserScreen extends StatelessWidget {
-  const AuthLoginNewUserScreen({Key? key}) : super(key: key);
+class AuthLoginForgotScreen extends StatelessWidget {
+  const AuthLoginForgotScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +28,8 @@ class AuthLoginNewUserScreen extends StatelessWidget {
                 ),
                 TextField(
                   decoration: InputDecoration(
-                      hintText: '8 Digit program code',
-                      labelText: '8 Digit program code',
+                      hintText: 'Registered Email',
+                      labelText: 'Registered Email',
                       focusedBorder: OutlineInputBorder(
                         borderSide: const BorderSide(
                             color: AppColors.appYellowColor, width: 2.0),
@@ -43,12 +43,12 @@ class AuthLoginNewUserScreen extends StatelessWidget {
                         borderSide: const BorderSide(color: Colors.white),
                         borderRadius: BorderRadius.circular(5),
                       ),
-                      labelStyle: const TextStyle(color: Colors.grey),
-                      hintStyle: const TextStyle(color: Colors.grey),
                       prefixIcon: const Icon(
                         Icons.mail_outline_rounded,
                         color: AppColors.appYellowColor,
                       ),
+                      labelStyle: const TextStyle(color: Colors.grey),
+                      hintStyle: const TextStyle(color: Colors.grey),
                       suffixStyle:
                           const TextStyle(color: AppColors.appYellowColor)),
                 ),
@@ -68,7 +68,7 @@ class AuthLoginNewUserScreen extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(5))),
                         ),
                         child: const Text(
-                          "CONTINUE",
+                          "RESET",
                           style: TextStyle(color: Colors.black),
                         ),
                       ),
