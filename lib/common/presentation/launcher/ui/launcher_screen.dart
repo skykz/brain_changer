@@ -22,7 +22,7 @@ class LauncherScreen extends StatefulWidget {
 class _LauncherScreenState extends State<LauncherScreen> {
   @override
   void initState() {
-    WidgetsBinding.instance?.addPostFrameCallback((_) async {
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
       await context.read<GlobalLauncherCubit>().checkInitialState();
     });
     super.initState();

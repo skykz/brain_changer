@@ -115,7 +115,7 @@ class _AuthLoginScreenState extends State<AuthLoginScreen> {
                           ),
                           child: const Text(
                             "LOGIN",
-                            style: TextStyle(color: Colors.black),
+                            style: TextStyle(color: Colors.black, fontSize: 14),
                           ),
                         ),
                       ),
@@ -146,7 +146,9 @@ class _AuthLoginScreenState extends State<AuthLoginScreen> {
                           ),
                           child: const Text(
                             "NEW USER",
-                            style: TextStyle(color: AppColors.appYellowColor),
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: AppColors.appYellowColor, fontSize: 14),
                           ),
                         ),
                       ),
@@ -171,8 +173,9 @@ class _AuthLoginScreenState extends State<AuthLoginScreen> {
                             ),
                             child: const Text(
                               "FORGOT PASSWORD",
+                              textAlign: TextAlign.center,
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 13),
+                                  TextStyle(color: Colors.white, fontSize: 12),
                             ),
                           ),
                         ),
@@ -197,8 +200,9 @@ class _AuthLoginScreenState extends State<AuthLoginScreen> {
                             ),
                             child: const Text(
                               "FORGOT USERNAME",
+                              textAlign: TextAlign.center,
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 13),
+                                  TextStyle(color: Colors.white, fontSize: 12),
                             ),
                           ),
                         ),
